@@ -1,5 +1,8 @@
 # Sorting Visualizer
 
+## Live Demo
+https://sorting-visualizer-007.herokuapp.com/
+
 ## Project setup
 ```
 npm install
