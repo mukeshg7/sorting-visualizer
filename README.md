@@ -1,4 +1,4 @@
-# sort
+# Sorting Visualizer
 
 ## Project setup
 ```
