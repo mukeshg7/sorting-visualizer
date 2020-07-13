@@ -1,40 +1,39 @@
 <template>
   <div class="main">
 
-    <v-app-bar style="height: 80px;">
+    <v-app-bar style="height: 100px;">
         <v-toolbar-title style="font-size: 30px; padding-top: 13px;" color="white">Sorting Algo Visualiser </v-toolbar-title>
         
-        <v-col cols="1"></v-col>
 
-          <v-col cols="2">
+          <v-spacer></v-spacer>
+          
 
-              <v-slider style="padding-top: 50px;" 
-                        label="Number" v-model="number"
-                        :thumb-size="24" thumb-label="always" 
-                        :disabled="isSorting"
-                        min="10" max="100"
-                        @change="generate">
+              <v-slider style="padding-top: 60px;" 
+                    label="Number" v-model="number"
+                    :thumb-size="24" thumb-label="always" 
+                    :disabled="isSorting"
+                    min="10" max="50"
+                    @change="generate">
               </v-slider>
-
-          </v-col>
-          <v-col cols="2">
-
-              <v-slider style="padding-top: 50px;" 
+              
+              <v-slider style="padding-top: 60px;" 
                         label="Speed" v-model="speed"
                         :thumb-size="24" thumb-label="always" 
                         tick-size= "20"
                         min="1" max="10">
               </v-slider>
 
-          </v-col>
+          
 
           <div class="button-container">
-            <v-btn class="button white--text" color="#33bdef"
-                    v-on:click="shuffle" 
-                    :disabled="isSorting" >Shuffle!</v-btn>
-            <v-btn class="button white--text" color="#33bdef"
-                    v-on:click="sort(selectedAlgo)" 
-                    :disabled="isSorting">Sort!</v-btn>
+
+              <v-btn class="button white--text" color="#33bdef"
+                      v-on:click="shuffle" 
+                      :disabled="isSorting" >Shuffle!</v-btn>
+              <v-btn class="button white--text" color="#33bdef"
+                      v-on:click="sort(selectedAlgo)" 
+                      :disabled="isSorting">Sort!</v-btn>
+                      
           </div>
           
           
@@ -44,11 +43,11 @@
                       v-model="selectedAlgo"
                       :disabled="isSorting"
                       label="Algorithm" outlined
-                      style="padding-top: 50px;">
+                      style="padding-top: 50px;" right>
             </v-select>
           
-
-    </v-app-bar>
+        </v-app-bar>
+    
 
     <div class="hello">
 
@@ -221,8 +220,8 @@ button:focus {
     background-color: #f96167;
     padding: 1px;
     width: 90%;
-    max-width: 20px;
-    border-radius: 3px;
+    max-width: 25px;
+    border-radius: 7px;
     color: white;
     margin: 2.5px;
 
@@ -241,11 +240,11 @@ button:focus {
     transition: all ease 0.5s;
 }
 .button-container {
-  padding-top: 15px;
+  margin-top: 30px;
+  padding: 10px;
 }
 .button {
-    padding: 6px 24px;
-    margin: 10px;
+  margin: 5px 15px;
 }
 
 .button:hover {
