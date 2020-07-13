@@ -122,14 +122,12 @@ export default {
 
       arraySetWithoutIndexes: async function(array, index, value) {
           array.splice(index, 1, value);
-          await this.sleep();
       },
 
       arraySwap: async function(array, indexA, indexB) {
         var x = array[indexA];
         this.arraySetWithoutIndexes(array, indexA, array[indexB]);
         this.arraySetWithoutIndexes(array, indexB, x);
-        await this.sleep();
       },
 
       shuffle: function() {
@@ -191,7 +189,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 input:focus,
 select:focus,
@@ -227,6 +225,16 @@ button:focus {
     border-radius: 3px;
     color: white;
     margin: 2.5px;
+
+    &.active {
+      background: #92cc6b;
+    }
+    &.swaping {
+      background: #cc6b6b;
+    }
+    &.traversing {
+      background: #ad6bcc;
+    }
 }
 
 .list-animation-item {
