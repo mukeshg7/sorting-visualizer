@@ -1,8 +1,8 @@
-module.exports = {
-  "transpileDependencies": [
-    "vuetify"
-  ],
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/sorting-visualizer/'
-    : '/'
-}
+// module.exports = {
+//   "transpileDependencies": [
+//     "vuetify"
+//   ],
+//   publicPath: process.env.NODE_ENV === 'production'
+//     ? '/sorting-visualizer/'
+//     : '/'
+// }
